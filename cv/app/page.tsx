@@ -73,12 +73,20 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-4">
               About Me
             </h2>
-            <p className="text-lg text-pretty leading-relaxed">
+            <p
+              className="text-lg text-justify leading-relaxed"
+              style={{
+                hyphens: "auto",
+                textAlign: "justify",
+                textJustify: "inter-word",
+              }}
+            >
               I am a Software Developer specialized in frontend development
               seeking opportunities to contribute to the development of
               innovative solutions and build on my technical skills and
               experience in a supportive and dynamic environment.
             </p>
+
             <div className="flex justify-center mt-2">
               <FaThinkPeaks className="text-3xl text-pink-500 mr-2" />
               <FaCode className="text-3xl text-blue-500 mr-2" />
@@ -242,7 +250,14 @@ const HomePage: React.FC = () => {
           <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-6">
             Experiences
           </h2>
-          <p className="text-sm text-justify leading-relaxed ">
+          <p
+            className="text-sm text-justify leading-relaxed "
+            style={{
+              hyphens: "auto",
+              textAlign: "justify",
+              textJustify: "inter-word",
+            }}
+          >
             <Link
               href="https://kpmg.com/ng/en/home.html"
               target="_blank"
@@ -272,7 +287,14 @@ const HomePage: React.FC = () => {
             significantly to the team while honing my technical skills in a
             high-stakes environment.
           </p>
-          <p className="text-sm text-justify leading-relaxed mt-5">
+          <p
+            className="text-sm text-justify leading-relaxed mt-5"
+            style={{
+              hyphens: "auto",
+              textAlign: "justify",
+              textJustify: "inter-word",
+            }}
+          >
             <Link
               href="https://www.edusko.com/school/jerclems-nursery-and-primary-school"
               target="_blank"
@@ -296,7 +318,14 @@ const HomePage: React.FC = () => {
             the learning curriculum, ensuring the program was both engaging and
             educational for the young participants.
           </p>
-          <p className="text-sm text-justify leading-relaxed mt-5">
+          <p
+            className="text-sm text-justify leading-relaxed mt-5"
+            style={{
+              hyphens: "auto",
+              textAlign: "justify",
+              textJustify: "inter-word",
+            }}
+          >
             <Link
               href="https://www.alxafrica.com/"
               target="_blank"
@@ -310,7 +339,15 @@ const HomePage: React.FC = () => {
                   height={150}
                   className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
                 />
-                ALX Software Engineering Trainee
+                <span
+                  style={{
+                    hyphens: "auto",
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                  }}
+                >
+                  ALX Software Engineering Trainee
+                </span>
               </span>
             </Link>
             <br />
@@ -324,7 +361,14 @@ const HomePage: React.FC = () => {
             software projects while also resolving technical issues and
             providing technical support among my peers.
           </p>
-          <p className="text-sm text-justify leading-relaxed mt-5">
+          <p
+            className="text-sm text-justify leading-relaxed mt-5"
+            style={{
+              hyphens: "auto",
+              textAlign: "justify",
+              textJustify: "inter-word",
+            }}
+          >
             <Link
               href="https://www.linkedin.com/in/endurance-idemudia-4a9966185/?originalSubdomain=ng"
               target="_blank"
