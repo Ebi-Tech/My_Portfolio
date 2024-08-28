@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import bannerImage from "../public/images/bi.png";
 import {
   FaLinkedin,
@@ -19,9 +20,10 @@ import {
   FaGoogle,
   FaMicrosoft,
   FaResearchgate,
-  FaPen,
   FaThinkPeaks,
   FaRunning,
+  FaInstagram,
+  FaDiscourse,
 } from "react-icons/fa";
 
 const HomePage: React.FC = () => {
@@ -38,13 +40,13 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div>
-        <header className="relative text-center mb-2">
+        <header className="relative text-center mb-4 md:mb-6 lg:mb-8">
           <Image
             src={bannerImage}
             alt="Banner Image"
-            className="w-full object-cover mb-2"
+            className="w-full object-cover mb-4 md:mb-6 lg:mb-8 h-full"
           />
-          <div className="absolute top-1/2 left-[70%] transform -translate-x-1/2 -translate-y-1/2 w-[50%] h-[60%] overflow-hidden z-10 border-4 border-white rounded-lg shadow-lg">
+          <div className="absolute top-[37%] left-[70%] transform -translate-x-1/2 -translate-y-1/2 w-1/2 md:w-[50%] lg:w-[54%] h-[50%] overflow-hidden z-10 border-4 border-white rounded-lg shadow-lg">
             {images.map((image, index) => (
               <Image
                 key={index}
@@ -68,7 +70,7 @@ const HomePage: React.FC = () => {
       <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-gray-600 to-gray-900 text-white p-8">
         <main className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           <section className="text-center max-w-3xl">
-            <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-6">
+            <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-4">
               About Me
             </h2>
             <p className="text-lg text-justify leading-relaxed">
@@ -77,20 +79,18 @@ const HomePage: React.FC = () => {
               innovative solutions and build on my technical skills and
               experience in a supportive and dynamic environment.
             </p>
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-2">
               <FaThinkPeaks className="text-3xl text-pink-500 mr-2" />
               <FaCode className="text-3xl text-blue-500 mr-2" />
               <FaPaintBrush className="text-3xl text-orange-500 mr-2" />
               <FaDesktop className="text-3xl text-green-500" />
             </div>
             {/* mini-game simulation */}
-            <div className="">
+            <div className="w-full max-w-full">
               <svg
-                width="500"
-                height="180"
                 viewBox="0 0 500 200"
                 xmlns="http://www.w3.org/2000/svg"
-                className="mt-10"
+                className="mt-10 w-full h-auto"
               >
                 {/* Sky Background */}
                 <rect width="500" height="180" fill="#87CEEB" />
@@ -103,8 +103,8 @@ const HomePage: React.FC = () => {
                   fill="white"
                   textAnchor="middle"
                   fontFamily="Arial, sans-serif"
-                  textDecoration={"underline"}
-                  textRendering={"optimizeLegibility"}
+                  textDecoration="underline"
+                  textRendering="optimizeLegibility"
                   className="font-bold"
                 >
                   @drealebitech
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
                 <circle cx="450" cy="30" r="20" fill="yellow" />
 
                 {/* Human Figure */}
-                <g id="human" transform="translate(100, 130)">
+                <g id="human" transform="translate(70, 100)">
                   <circle cx="0" cy="0" r="10" fill="#FFD700" /> {/* Head */}
                   <rect
                     x="-5"
@@ -161,19 +161,19 @@ const HomePage: React.FC = () => {
                   xlinkHref="#human"
                   attributeName="transform"
                   type="translate"
-                  values="100,130; 100,100; 100,130"
+                  values="70,100; 70,50; 70,100"
                   keyTimes="0; 0.5; 1"
-                  dur="1.5s"
+                  dur="2.7s"
                   repeatCount="indefinite"
                 />
 
                 {/* Obstacle */}
-                <rect x="350" y="140" width="30" height="20" fill="red">
+                <rect x="500" y="140" width="30" height="20" fill="red">
                   <animate
                     attributeName="x"
                     from="500"
                     to="0"
-                    dur="2.5s"
+                    dur="2.7s"
                     repeatCount="indefinite"
                   />
                 </rect>
@@ -185,7 +185,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-6">
               Skills
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:text-sm">
               <div className="bg-white bg-opacity-20 rounded-lg py-2 px-4 text-lg font-medium">
                 <FaReact className="text-2xl text-blue-500 mr-2" />
                 React
@@ -227,8 +227,8 @@ const HomePage: React.FC = () => {
                 Research and Data Analysis
               </div>
               <div className="bg-white bg-opacity-20 rounded-lg py-2 px-4 text-lg font-medium">
-                <FaPen className="text-2xl text-teal-400 mr-2" />
-                Excellent communication in English
+                <FaDiscourse className="text-2xl text-teal-400 mr-2" />
+                Excellent comm. in English
               </div>
               <div className="bg-white bg-opacity-20 rounded-lg py-2 px-4 text-lg font-medium">
                 <FaRunning className="text-2xl text-emerald-50 mr-2" />
@@ -243,16 +243,22 @@ const HomePage: React.FC = () => {
             Experiences
           </h2>
           <p className="text-sm text-justify leading-relaxed ">
-            <span className="flex font-bold items-center text-lg text-lime-300 italic">
-              <Image
-                src="/images/kpmg.png"
-                alt="Work Image"
-                width={100}
-                height={150}
-                className="mr-2 rounded-[70%] h-[50px] w-[50px] z-10"
-              />
-              KPMG Nigeria
-            </span>
+            <Link
+              href="https://kpmg.com/ng/en/home.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex font-bold items-center text-lg text-lime-300 italic hover:scale-105 transform transition">
+                <Image
+                  src="/images/kpmg.png"
+                  alt="Work Image"
+                  width={100}
+                  height={150}
+                  className="mr-2 rounded-[70%] h-[50px] w-[50px] z-10"
+                />
+                KPMG Nigeria
+              </span>
+            </Link>
             <br />
             In October 2023, I joined KPMG Nigeria as a Project Officer in the
             Advisory-Forensic unit, where I managed the handling and
@@ -267,16 +273,22 @@ const HomePage: React.FC = () => {
             high-stakes environment.
           </p>
           <p className="text-sm text-justify leading-relaxed mt-5">
-            <span className="flex font-bold items-center text-lg text-lime-300 italic">
-              <Image
-                src="/images/js.png"
-                alt="Work Image"
-                width={100}
-                height={150}
-                className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
-              />
-              Jerclems School
-            </span>
+            <Link
+              href="https://www.edusko.com/school/jerclems-nursery-and-primary-school"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex font-bold items-center text-lg text-lime-300 italic hover:scale-105 transform transition">
+                <Image
+                  src="/images/js.png"
+                  alt="Work Image"
+                  width={100}
+                  height={150}
+                  className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
+                />
+                Jerclems School
+              </span>
+            </Link>
             <br />
             From July to October 2023, I led a summer Code Camp organized by
             Jerclems School, where I taught Grade 4-6 students the basics of
@@ -285,16 +297,22 @@ const HomePage: React.FC = () => {
             educational for the young participants.
           </p>
           <p className="text-sm text-justify leading-relaxed mt-5">
-            <span className="flex font-bold items-center text-lg text-lime-300 italic">
-              <Image
-                src="/images/alx.png"
-                alt="Work Image"
-                width={100}
-                height={150}
-                className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
-              />
-              ALX Software Engineering Trainee
-            </span>
+            <Link
+              href="https://www.alxafrica.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex font-bold items-center text-lg text-lime-300 italic hover:scale-105 transform transition">
+                <Image
+                  src="/images/alx.png"
+                  alt="Work Image"
+                  width={100}
+                  height={150}
+                  className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
+                />
+                ALX Software Engineering Trainee
+              </span>
+            </Link>
             <br />
             From May 2022 to June 2023, I was a Software Engineering trainee at
             ALX Africa, where I developed and maintained web applications using
@@ -307,16 +325,22 @@ const HomePage: React.FC = () => {
             providing technical support among my peers.
           </p>
           <p className="text-sm text-justify leading-relaxed mt-5">
-            <span className="flex font-bold items-center text-lg text-lime-300 italic">
-              <Image
-                src="/images/Ed.png"
-                alt="Work Image"
-                width={100}
-                height={150}
-                className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
-              />
-              Eddyblinks Tech
-            </span>
+            <Link
+              href="https://www.linkedin.com/in/endurance-idemudia-4a9966185/?originalSubdomain=ng"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex font-bold items-center text-lg text-lime-300 italic hover:scale-105 transform transition">
+                <Image
+                  src="/images/Ed.png"
+                  alt="Work Image"
+                  width={100}
+                  height={150}
+                  className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
+                />
+                Eddyblinks Tech
+              </span>
+            </Link>
             <br />
             From 2019 to 2022, I interned at Eddyblinks Tech, where I executed
             graphic design projects for various clients using CorelDraw and
@@ -333,7 +357,7 @@ const HomePage: React.FC = () => {
             Education
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 text-black rounded-lg w-full">
-            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl">
+            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl hover:scale-90 transform transition">
               <Image
                 src="/images/alu.png"
                 alt="School Image"
@@ -348,7 +372,7 @@ const HomePage: React.FC = () => {
                 <p className="text-lg">BSc. Software Engineering | 2024-2027</p>
               </div>
             </div>
-            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl">
+            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl hover:scale-90 transform transition">
               <Image
                 src="/images/alx.png"
                 alt="School Image"
@@ -363,7 +387,22 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl">
+            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl hover:scale-90 transform transition">
+              <Image
+                src="/images/alx.png"
+                alt="School Image"
+                width={100}
+                height={150}
+                className="mr-4 rounded-[70%] h-[90px] w-[90px]"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">ALX</h3>
+                <p className="text-lg">
+                  Certificate - ALX Ventures Founder Academy | 2023
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center bg-slate-200 col-span-1 p-4 rounded-xl hover:scale-90 transform transition">
               <Image
                 src="/images/alogo.png"
                 alt="School Image"
@@ -385,18 +424,21 @@ const HomePage: React.FC = () => {
           <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-6">
             Contact
           </h2>
-          <div className="flex justify-center space-x-8">
-            <a href="https://www.linkedin.com/in/divine-ebi/" target="_blank">
-              <FaLinkedin className="text-4xl text-blue-600" />
+          <div className="flex justify-center space-x-8 items-center">
+            <a href="https://www.linkedin.com/in/ebitech14/" target="_blank">
+              <FaLinkedin className="text-4xl text-blue-600 hover:scale-110 transform transition" />
             </a>
-            <a href="https://github.com/divine" target="_blank">
-              <FaGithub className="text-4xl text-gray-500" />
+            <a href="https://github.com/Ebi-Tech/" target="_blank">
+              <FaGithub className="text-4xl text-gray-500 hover:scale-110 transform transition" />
             </a>
-            <a href="https://twitter.com/divine" target="_blank">
-              <FaTwitter className="text-4xl text-blue-400" />
+            <a href="https://instagram.com/drealebitech" target="_blank">
+              <FaInstagram className="text-4xl text-pink-500 hover:scale-110 transform transition" />
             </a>
-            <a href="mailto:divine@example.com">
-              <FaEnvelope className="text-4xl text-red-500" />
+            <a href="https://twitter.com/ebitech14" target="_blank">
+              <FaTwitter className="text-4xl text-blue-400 hover:scale-110 transform transition" />
+            </a>
+            <a href="mailto:difebi14@gmail.com.com">
+              <FaEnvelope className="text-4xl text-red-500 hover:scale-110 transform transition" />
             </a>
           </div>
         </section>
