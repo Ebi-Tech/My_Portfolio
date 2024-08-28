@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# HomePage Component
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This is a React component for a professional portfolio homepage. It showcases a sliding image carousel, an "About Me" section, a "Skills" section with icons, a mini-game simulation, an "Experiences" section, and an "Education" section. It also includes contact information with social media links.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Sliding Image Carousel:** Displays a series of images that transition every 3 seconds.
+- **About Me Section:** Provides a brief overview of the user’s background and skills with relevant icons.
+- **Skills Section:** Lists key skills with corresponding icons.
+- **Mini-Game Simulation:** Includes an SVG-based mini-game simulation for visual engagement.
+- **Experiences Section:** Highlights previous work experience with links to company websites and descriptions of roles.
+- **Education Section:** Displays educational background with institution details.
+- **Contact Section:** Provides links to social media profiles and email for easy contact.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- React
+- Next.js
+- Tailwind CSS
+- TypeScript
+- React Icons
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone <repository-url>
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Navigate to the project directory:**
 
-## Deploy on Vercel
+   ```bash
+   cd <project-directory>
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Install dependencies:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser and go to:**
+
+   ```bash
+   http://localhost:3000
+   ```
+
+## File Structure
+
+- `components/HomePage.tsx`: Main component for the homepage.
+- `public/images/`: Contains all image assets used in the project.
+
+## Contributing
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -am 'Add new feature'`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Create a new Pull Request
+
+## Contact
+
+- **LinkedIn:** [@ebitech14](https://www.linkedin.com/in/ebitech14)
+- **GitHub:** [Ebi-Tech](https://github.com/Ebi-Tech)
+- **Instagram:** [@drealebitech](https://www.instagram.com/drealebitech)
+- **Twitter:** [@ebitech14](https://twitter.com/ebitech14)
+- **Email:** [difebi14@gmail.com](mailto:difebi14@gmail.com)
