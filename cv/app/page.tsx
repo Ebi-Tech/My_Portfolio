@@ -331,7 +331,7 @@ const HomePage: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="flex font-bold items-center text-lg text-lime-300 italic hover:scale-105 transform transition">
+              <span className="flex font-bold items-start text-lg text-lime-300 italic hover:scale-105 transform transition">
                 <Image
                   src="/images/alx.png"
                   alt="Work Image"
@@ -339,13 +339,7 @@ const HomePage: React.FC = () => {
                   height={150}
                   className="mr-4 rounded-[70%] h-[50px] w-[50px] z-10"
                 />
-                <span
-                  style={{
-                    hyphens: "auto",
-                    textAlign: "justify",
-                    textJustify: "inter-word",
-                  }}
-                >
+                <span className="text-left">
                   ALX Software Engineering Trainee
                 </span>
               </span>
