@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
               />
             ))}
           </div>
-          <h1 className="relative z-20 text-2xl font-bold text-shadow-md">
+          <h1 className="relative z-20 lg:text-2xl md:text-lg sm:text-lg font-bold text-shadow-md text-black bg-slate-200">
             Frontend Developer | BSE Major @ The African Leadership University
           </h1>
         </header>
@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-4">
               About Me
             </h2>
-            <p className="text-lg text-justify leading-relaxed">
+            <p className="text-lg text-pretty leading-relaxed">
               I am a Software Developer specialized in frontend development
               seeking opportunities to contribute to the development of
               innovative solutions and build on my technical skills and
