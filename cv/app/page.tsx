@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div>
-        <header className="relative text-center mb-4 md:mb-6 lg:mb-8">
+        <header className="relative text-center mb-4 md:mb-6 lg:mb-8 bg-slate-200">
           <Image
             src={bannerImage}
             alt="Banner Image"
@@ -458,6 +458,30 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+        {/* New Projects Demo Section */}
+        <div className="w-full text-center my-16">
+          <Link href="/projects">
+            <p className="inline-flex items-center text-2xl lg:text-4xl font-bold text-white hover:text-blue-500 transition duration-300 ease-in-out">
+              Projects Demo
+              <span className="ml-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-8 h-8 lg:w-12 lg:h-12"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </span>
+            </p>
+          </Link>
+        </div>
         <section className="mb-16 text-center max-w-3xl">
           <h2 className="text-4xl font-semibold border-b-2 border-white pb-2 mb-6">
             Contact
